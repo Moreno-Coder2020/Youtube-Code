@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand";
+  font-weight: 800;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.position, .flex {
+  width: 45%;
+  height: 400px;
+  background-color: #001f3b;
+  color: #e41b17;
+}
+
+.position {
+  position: relative;
+}
+
+.position h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
