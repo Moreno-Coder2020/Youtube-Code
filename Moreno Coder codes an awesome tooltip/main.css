@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand";
+  font-weight: 800;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #001f3b;
+}
+
+input {
+  font-size: 30px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+span {
+  height: 50px;
+  width: 50px;
+  background-color: #007be8;
+  color: #FFF;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 30px;
+  position: relative;
+}
+
+span::before {
+  content: "The password must contain capital and small letter, number and signs";
+  position: absolute;
+  top: -70px;
+  left: 0;
+  width: 280px;
+  height: 50px;
+  background-color: #e41b17;
+  color: #FFF;
+  font-size: 15px;
+  line-height: 25px;
+  border-radius: 5px;
+  opacity: 1;
+  transition: .4s ease-in;
+}
+
+span:hover::before {
+  opacity: 1;
+}
