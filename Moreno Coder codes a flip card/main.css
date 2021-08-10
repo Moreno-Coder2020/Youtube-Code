@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand";
+  font-weight: 800;
+}
+
+body {
+  background-color: #252525;
+  color: #FFF;
+}
+
+.row {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.x-axis, .y-axis {
+  perspective: 1000px;
+}
+
+.bonus {
+  height: 50vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card {
+  flex: 0 0 28%;
+  max-width: 28%;
+  height: 213px;
+  position: relative;
+  transition: 1s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 25px rgba(0, 0, 0, .4);
+}
+
+.card:hover {
+  transform: rotateY(-180deg);
+  box-shadow: none;
+}
+
+.x-axis .card:hover {
+  transform: rotateX(-180deg);
+}
+
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+
+.back {
+  background-color: #3a3a3a;
+  transform: rotateY(180deg);
+  padding: 10px;
+}
+
+.x-axis .back {
+  transform: rotateX(180deg);
+}
+
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+h5 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 40px;
+  margin-bottom: -25px;
+}
+
+
+/* BONUS */
+.bonus .one .back {
+  transform: rotateY(90deg);
+  transform-origin: right;
+  transition: 1s ease-in-out;
+}
+
+.bonus .one:hover {
+  transform: rotateY(0);
+  box-shadow: none;
+}
+
+.bonus .one:hover .back {
+  transform: rotateY(0);
+}
+
+.bonus .two:hover {
+  transform: rotateY(-180deg) rotate(180deg);
+}
+
+.bonus .two .back {
+  transform: rotateX(180deg);
+}
+
+.pre {
+  perspective: 1000px;
+}
+
+.bonus .three {
+  transform-origin: right;
+}
+
+.bonus .three:hover {
+  transform: rotateY(-180deg) translateX(377px);
+  box-shadow: none;
+}
+
