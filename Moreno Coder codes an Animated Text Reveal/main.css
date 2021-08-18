@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand";
+  font-weight: 800;
+}
+
+body {
+  background-color: #252525;
+  color: #FFF;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 0 50px;
+}
+
+h1 {
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-size: 36px;
+  position: relative;
+  width: fit-content;
+  overflow: hidden;
+  color: transparent;
+  animation-name: color;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.two {
+  animation-delay: 6s;
+}
+
+.three {
+  animation-delay: 10s;
+}
+
+h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: crimson;
+  animation-name: text-reveal;
+  animation-duration: 4s;
+}
+
+.two span {
+  animation-delay: 4s;
+}
+
+.three span {
+  animation-delay: 8s;
+}
+
+@keyframes text-reveal {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes color {
+  from {
+    color: transparent
+  }
+
+  to {
+    color: #FFF;
+  }
+}
