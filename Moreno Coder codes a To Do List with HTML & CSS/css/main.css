@@ -1,0 +1,123 @@
+/* START VARIABLES */
+:root {
+  --red: #e41b17;
+  --blue: #007be8;
+  --dark-blue: #001f3b;
+}
+/* END VARIABLES */
+
+
+
+/* START GLOBAL */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand";
+  font-weight: 800;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--dark-blue);
+  color: #000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+UL {
+  list-style: none;
+}
+/* END GLOBAL */
+
+
+
+/* START TO DO LIST */
+.to-do-list {
+  background-color: #FFF;
+  width: 400px;
+  padding: 20px 0;
+}
+
+.to-do-list h1 {
+  background-color: var(--red);
+  color: #FFF;
+  width: fit-content;
+  padding: 10px 40px;
+  margin-bottom: 20px;
+  font-size: 3.2rem;
+  position: relative;
+  left: -20px;
+}
+
+.to-do-list h1::before {
+  content: "";
+  position: absolute;
+  top: 6.5px;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background-color: #c21815;
+  transform: skewY(30deg);
+  z-index: -1;
+}
+
+.to-do-list ul {
+  padding: 0 20px;
+}
+
+.to-do-list ul li {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.to-do-list ul li:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.to-do-list ul li input {
+  appearance: none;
+  position: relative;
+}
+
+.to-do-list ul li input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: var(--blue);
+}
+
+.to-do-list ul li input::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #FFF;
+}
+
+.to-do-list ul li input:checked::after {
+  display: none;
+}
+
+.to-do-list ul li label {
+  margin-left: 45px;
+}
+
+.to-do-list ul li input:checked + label {
+  text-decoration: line-through;
+}
+/* END TO DO LIST */
